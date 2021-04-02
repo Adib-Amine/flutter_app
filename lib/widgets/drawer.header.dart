@@ -7,7 +7,7 @@ class MyDrawerHeaderWidget extends StatelessWidget {
       decoration : BoxDecoration(
           gradient : LinearGradient(
               colors: [
-                Colors.pinkAccent,
+                Colors.blueAccent,
                 Colors.white
               ]
           )

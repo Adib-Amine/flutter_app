@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       title: 'my first app',
       theme: ThemeData(
-          primarySwatch: Colors.pink,
+          primarySwatch: Colors.blue,
           textTheme: TextTheme(
               bodyText2: TextStyle(
                   fontSize: 18,
-                  color: Colors.pinkAccent
+                  color: Colors.blueAccent
               )
           )
       ),

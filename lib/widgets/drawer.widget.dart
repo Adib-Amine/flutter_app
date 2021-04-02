@@ -13,36 +13,36 @@ class MyDrawerWidget extends StatelessWidget {
               MyDrawerHeaderWidget(),
               ListTile(
                 //l'icone du home à gauche
-                leading: Icon(Icons.home,color: Colors.purple),
+                leading: Icon(Icons.home,color: Colors.lightBlueAccent),
                 //la petite fléche à droite
-                trailing: Icon(Icons.arrow_right,color:Colors.purple),
-                title: Text("Home",style:TextStyle(fontSize: 18,color: Colors.purple)),
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Home",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
                 onTap: (){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  HomePage()));
                 },
               ),
               Divider(
-                  color : Colors.purpleAccent
+                  color : Colors.blueAccent
               ),
               ListTile(
                 //l'icone du home à gauche
-                leading: Icon(Icons.confirmation_number,color: Colors.purple),
+                leading: Icon(Icons.confirmation_number,color: Colors.lightBlueAccent),
                 //la petite fléche à droite
-                trailing: Icon(Icons.arrow_right,color:Colors.purple),
-                title: Text("Counter",style:TextStyle(fontSize: 18,color: Colors.purple)),
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Counter",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
                 onTap: (){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  CounterPage()));
                 },
               ),
               Divider(
-                  color : Colors.purpleAccent
+                  color : Colors.blueAccent
               ),
               ListTile(
                 //l'icone du home à gauche
-                leading: Icon(Icons.supervised_user_circle,color: Colors.purple),
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
                 //la petite fléche à droite
-                trailing: Icon(Icons.arrow_right,color:Colors.purple),
-                title: Text("Users",style:TextStyle(fontSize: 18,color: Colors.purple)),
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Users",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
               )
             ]
         )
