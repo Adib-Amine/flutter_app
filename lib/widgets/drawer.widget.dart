@@ -42,8 +42,61 @@ class MyDrawerWidget extends StatelessWidget {
                 leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
                 //la petite fléche à droite
                 trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
-                title: Text("Users",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
-              )
+                title: Text("GitHub",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
+              ListTile(
+                //l'icone du home à gauche
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
+                //la petite fléche à droite
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Pixabay",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
+              ListTile(
+                //l'icone du home à gauche
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
+                //la petite fléche à droite
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Metoe",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
+              ListTile(
+                //l'icone du home à gauche
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
+                //la petite fléche à droite
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("QR CODE",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
+              ListTile(
+                //l'icone du home à gauche
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
+                //la petite fléche à droite
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("OCR",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
+              ListTile(
+                //l'icone du home à gauche
+                leading: Icon(Icons.supervised_user_circle,color: Colors.lightBlueAccent),
+                //la petite fléche à droite
+                trailing: Icon(Icons.arrow_right,color:Colors.lightBlueAccent),
+                title: Text("Autres fonctionnalites",style:TextStyle(fontSize: 18,color: Colors.lightBlueAccent)),
+              ),
+              Divider(
+                  color : Colors.blueAccent
+              ),
             ]
         )
     );
