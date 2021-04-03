@@ -7,8 +7,10 @@ class MyDrawerHeaderWidget extends StatelessWidget {
       decoration : BoxDecoration(
           gradient : LinearGradient(
               colors: [
-                Colors.blueAccent,
-                Colors.white
+                Colors.orange,
+                Colors.deepOrangeAccent,
+                Colors.red,
+                Colors.redAccent
               ]
           )
       ),
@@ -16,8 +18,8 @@ class MyDrawerHeaderWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage("images/logo.png"),
-              radius : 60,
+              backgroundImage: AssetImage('images/logo.png'),
+              radius : 70,
             )
           ]
       ),
