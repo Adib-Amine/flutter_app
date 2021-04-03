@@ -32,7 +32,6 @@ class _WeatherState extends State<Weather> {
     print(url);
     this.getData(url);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
