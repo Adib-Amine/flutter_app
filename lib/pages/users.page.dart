@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'git.page.dart';
 
-
 class UsersPage extends StatefulWidget {
   @override
   _UsersPageState createState() => _UsersPageState();
@@ -91,7 +90,7 @@ class _UsersPageState extends State<UsersPage> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(15),
                                   borderSide: BorderSide(
-                                      width: 1,color: Colors.purple
+                                      width: 1,color: Colors.red
                                   )
                               )
                           ),
@@ -99,7 +98,7 @@ class _UsersPageState extends State<UsersPage> {
                       ),
                     ),
                     IconButton(
-                        icon: Icon(Icons.search,color:Colors.purpleAccent),
+                        icon: Icon(Icons.search,color:Colors.redAccent),
                         onPressed:(){
                           setState(() {
                             items=[];
@@ -118,12 +117,11 @@ class _UsersPageState extends State<UsersPage> {
                       itemBuilder:(context,index){
                         return ListTile(
                             onTap: (){
-                              Navigator.pushReplacement(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(builder:
                                       (context) =>
-                                      GitPage(login: items[index]['login'],
-                                          avatar:items[index]['avatar_url'])
+                                      GitPage(login: items[index]['login'])
                                   )
                               );
                             },
