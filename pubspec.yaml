@@ -23,6 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_ml_vision: ^0.11.0
+  image_picker: ^0.6.6+5
+  http:
+  intl:
+  image_cropper:
+  barcode_scan: any
+  firebase_core: "^0.7.0"
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,10 +39,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  http:
-  intl:
-  image_picker:
-  image_cropper:
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

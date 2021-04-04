@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:git_app/pages/home.page.dart';
 import 'package:git_app/pages/counter.page.dart';
 import 'package:git_app/pages/pixabay.page.dart';
+import 'package:git_app/pages/qcr.page.dart';
+import 'package:git_app/pages/qrcode.page.dart';
+import 'package:git_app/pages/users.page.dart';
 import 'package:git_app/pages/weather.page.dart';
 
 import 'drawer.header.dart';
@@ -45,7 +48,9 @@ class MyDrawerWidget extends StatelessWidget {
                 //la petite fléche à droite
                 trailing: Icon(Icons.arrow_right,color:Colors.red),
                 title: Text("GitHub",style:TextStyle(fontSize: 18,color: Colors.red)),
-
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  UsersPage()));
+                },
               ),
               Divider(
                   color : Colors.redAccent
@@ -82,6 +87,9 @@ class MyDrawerWidget extends StatelessWidget {
                 //la petite fléche à droite
                 trailing: Icon(Icons.arrow_right,color:Colors.red),
                 title: Text("QR CODE",style:TextStyle(fontSize: 18,color: Colors.red)),
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  QrScanPage()));
+                },
               ),
               Divider(
                   color : Colors.redAccent
@@ -92,6 +100,9 @@ class MyDrawerWidget extends StatelessWidget {
                 //la petite fléche à droite
                 trailing: Icon(Icons.arrow_right,color:Colors.red),
                 title: Text("OCR",style:TextStyle(fontSize: 18,color: Colors.red)),
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  CameraPage()));
+                },
               ),
               Divider(
                   color : Colors.redAccent
