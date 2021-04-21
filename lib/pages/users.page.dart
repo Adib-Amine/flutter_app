@@ -13,10 +13,10 @@ class _UsersPageState extends State<UsersPage> {
   String query;
   bool notInvisible = false;
   TextEditingController queryTextEditingController = new TextEditingController();
-  dynamic data = null;//data qui contient tout ce je veux
+  dynamic data = null;
   int currentPage = 0;
   int totalPage = 0;
-  int pageSize = 20;//number of results per page
+  int pageSize = 20;
   ScrollController scrollController = new ScrollController();
   List<dynamic> items = [];
 //method for search users
@@ -29,9 +29,9 @@ class _UsersPageState extends State<UsersPage> {
           this.data = json.decode(response.body);
           this.items.addAll(data['items']);
           if(data['total_count']% pageSize ==0) {
-            this.totalPage = data['total_count'] ~/ pageSize; // division entière we use ~/
+            this.totalPage = data['total_count'] ~/ pageSize;
           }else
-            this.totalPage = (data['total_count'] / pageSize).floor()+ 1; // floor pour prendre la partie entière
+            this.totalPage = (data['total_count'] / pageSize).floor()+ 1;
         })
     );
   }
@@ -67,7 +67,7 @@ class _UsersPageState extends State<UsersPage> {
                       child: Container(
                         padding: EdgeInsets.all(10),
                         child: TextFormField(
-                          obscureText: notInvisible,
+                          // obscureText: notInvisible,
                           onChanged: (value){
                             setState(() {
                               this.query = value;
@@ -77,16 +77,6 @@ class _UsersPageState extends State<UsersPage> {
                           },
                           controller: queryTextEditingController,
                           decoration: InputDecoration(
-                              suffixIcon:IconButton(
-                                  onPressed: (){
-                                    setState(() {
-                                      notInvisible = !this.notInvisible;
-                                    });
-                                  },
-                                  icon: Icon(
-                                      notInvisible==true?Icons.visibility_off:Icons.visibility
-                                  )
-                              ),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(15),
                                   borderSide: BorderSide(
@@ -98,7 +88,8 @@ class _UsersPageState extends State<UsersPage> {
                       ),
                     ),
                     IconButton(
-                        icon: Icon(Icons.search,color:Colors.redAccent),
+                        icon: Icon(Icons.search,color:Colors.red,size: 35,),
+                        padding: new EdgeInsets.all(0),
                         onPressed:(){
                           setState(() {
                             items=[];

@@ -5,8 +5,8 @@ import 'package:git_app/pages/pixabay.page.dart';
 import 'package:git_app/pages/qcr.page.dart';
 import 'package:git_app/pages/qrcode.page.dart';
 import 'package:git_app/pages/users.page.dart';
+import 'package:git_app/pages/weather.form.dart';
 import 'package:git_app/pages/weather.page.dart';
-
 import 'drawer.header.dart';
 
 class MyDrawerWidget extends StatelessWidget {
@@ -36,7 +36,7 @@ class MyDrawerWidget extends StatelessWidget {
                 trailing: Icon(Icons.arrow_right,color:Colors.red),
                 title: Text("Counter",style:TextStyle(fontSize: 18,color: Colors.red)),
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  CounterPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  CounterState()));
                 },
               ),
               Divider(
@@ -75,7 +75,7 @@ class MyDrawerWidget extends StatelessWidget {
                 trailing: Icon(Icons.arrow_right,color:Colors.red),
                 title: Text("Metoe",style:TextStyle(fontSize: 18,color: Colors.red)),
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  Weather("casablanca")));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>  WeatherForm()));
                 },
               ),
               Divider(

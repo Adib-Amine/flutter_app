@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_app/widgets/drawer.widget.dart';
 import './weather.page.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -8,11 +9,12 @@ class WeatherForm extends StatefulWidget {
 }
 
 class _WeatherFormState extends State<WeatherForm> {
-  String city = "";
+  String city = "Meteo";
   TextEditingController cityEditingController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawerWidget(),
       appBar: AppBar(
         title: Text('${city}'),
         backgroundColor: Colors.red,
@@ -20,8 +22,18 @@ class _WeatherFormState extends State<WeatherForm> {
       body: Column(
         children: <Widget>[
           Container(
+            padding: EdgeInsets.only(left:10,top:10,right:10,bottom:0),
             child: TextField(
-              decoration: InputDecoration(hintText: 'Entrez une ville...'),
+              // decoration: InputDecoration(hintText: 'Ville'),
+              decoration: InputDecoration(
+                hintText: 'Ville',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide(
+                          width: 1,color: Colors.red
+                      )
+                  )
+              ),
               controller: cityEditingController,
               onChanged: (String str) {
                 setState(() {
@@ -37,7 +49,7 @@ class _WeatherFormState extends State<WeatherForm> {
           ),
           Container(
             width: double.infinity,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.only(left:20,top:0,right:20,bottom:0),
             child: RaisedButton(
               child: Text('Voir la météo'),
               textColor: Colors.white,

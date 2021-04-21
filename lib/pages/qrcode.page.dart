@@ -3,6 +3,8 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/services.dart';
 import 'dart:async';
 
+import 'package:git_app/widgets/drawer.widget.dart';
+
 class QrScanPage extends StatefulWidget {
   @override
   _QrScanPageState createState() => _QrScanPageState();
@@ -13,9 +15,9 @@ class _QrScanPageState extends State<QrScanPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawerWidget(),
       appBar: AppBar(
         title: Text("QR Code"),
-        backgroundColor: Colors.deepOrange,
       ),
       body: Center(
         child: Text(result != null ? result : 'Scan QR',

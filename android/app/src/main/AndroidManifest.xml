@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.git_app">
    <application
-        android:label="git_app"
+        android:label="flutter_app"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

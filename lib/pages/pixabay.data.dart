@@ -22,47 +22,51 @@ class _GalleryDataPageState extends State<GalleryDataPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("${widget.keyWord}, page ${currentPage}/${totalPages}"),
-          backgroundColor: Colors.red,
         ),
-        body: (dataGallery == null
-            ? CircularProgressIndicator()
-            : ListView.builder(
-                itemCount: (dataGallery == null ? 0 : hits.length),
-                controller: _scrollController,
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: <Widget>[
-                      Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.only(left: 10, right: 10),
-                        child: Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Center(
-                              child: Text(
-                                hits[index]['tags'],
-                                style: TextStyle(
-                                    fontSize: 22,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
+        body: Center(
+          child: (dataGallery == null
+              ? CircularProgressIndicator(
+            strokeWidth: 3,
+          )
+              : ListView.builder(
+              itemCount: (dataGallery == null ? 0 : hits.length),
+              controller: _scrollController,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: <Widget>[
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Center(
+                            child: Text(
+                              hits[index]['tags'],
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
-                          color: Colors.red,
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                    Container(
+                      child: Card(
+                        child: Image.network(
+                          hits[index]['webformatURL'],
+                          fit: BoxFit.fitWidth,
                         ),
                       ),
-                      Container(
-                        child: Card(
-                          child: Image.network(
-                            hits[index]['webformatURL'],
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                        padding: EdgeInsets.only(left: 10, right: 10),
-                      )
-                    ],
-                  );
-                })));
+                      padding: EdgeInsets.only(left: 10, right: 10),
+                    )
+                  ],
+                );
+              })),
+        )
+    );
   }
 
   @override

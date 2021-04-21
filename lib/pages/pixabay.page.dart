@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_app/widgets/drawer.widget.dart';
 import './pixabay.data.dart';
 class Gallery extends StatefulWidget {
   @override
@@ -10,8 +11,8 @@ class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: MyDrawerWidget(),
         appBar: AppBar(
-          backgroundColor: Colors.red,
           title: Text('${keyword}'),
         ),
         body: Padding(

@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
+import 'package:git_app/widgets/drawer.widget.dart';
 import "package:image_cropper/image_cropper.dart";
 import 'package:image_picker/image_picker.dart';
 
@@ -17,9 +18,9 @@ class _CameraPageState extends State<CameraPage> {
   Widget build(BuildContext context) {
 // TODO: implement build
     return Scaffold(
+      drawer: MyDrawerWidget(),
       appBar: AppBar(
         title: Text("Camera"),
-        backgroundColor: Colors.deepOrange,
       ),
       body: Container(
         child: Center(
@@ -30,7 +31,7 @@ class _CameraPageState extends State<CameraPage> {
               width: double.infinity,
               padding: EdgeInsets.all(10),
               child: MaterialButton(
-                color: Colors.blue,
+                color: Colors.red,
                 onPressed: () {
                   openDialog(context);
                 },

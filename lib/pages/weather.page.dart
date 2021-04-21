@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_app/widgets/drawer.widget.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:intl/intl.dart';
@@ -35,6 +36,7 @@ class _WeatherState extends State<Weather> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // drawer: MyDrawerWidget(),
         appBar: AppBar(
           title: Text('${widget.city}'),
           backgroundColor: Colors.red,

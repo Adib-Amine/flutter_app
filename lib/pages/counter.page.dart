@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:git_app/widgets/drawer.widget.dart';
 
-
-
-class CounterPage extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      home: CounterState(),
-    );
-  }
-  
-}
+// class CounterPage extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       home: CounterState(),
+//     );
+//   }
+// }
 
 class CounterState extends StatefulWidget {
   @override
@@ -29,9 +26,10 @@ class _CounterState extends State<CounterState>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      drawer: MyDrawerWidget(),
       appBar: AppBar(
         title:Text("Counter"),
-        backgroundColor: Colors.red,
+        // backgroundColor: Colors.red,
       ),
       body: Center(
         child: Column(
@@ -52,7 +50,7 @@ class _CounterState extends State<CounterState>{
         tooltip: 'Increment',
         child: Icon(Icons.add),
         backgroundColor: Colors.red,
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 
