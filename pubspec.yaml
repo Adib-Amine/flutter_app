@@ -28,8 +28,12 @@ dependencies:
   http:
   intl:
   image_cropper:
-  barcode_scan: any
+  #  barcode_scan: any
   firebase_core: "^0.7.0"
+  # scan QR Code
+  flutter_barcode_scanner: ^1.0.1
+  # create QR Code
+  barcode_widget: ^1.5.0
 
 
   # The following adds the Cupertino Icons font to your application.
