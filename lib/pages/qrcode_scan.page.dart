@@ -56,7 +56,7 @@ class _QRScanPageState extends State<QRScanPage> {
                 ),
               ),
               onPressed:  () => scanQRCode(),
-          )
+          ),
         ],
       ),
     ),
